@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<base href="http://www.scallywagpress.com.au/" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+function swapImage(index)
+{
+	// middleLeftExImages can contain images for girls books, boys books, etc. start with girls, then boys, etc.
+	middleLeftExImages = ['MiddleLeft_ex.jpg','MiddleLeft_ex.jpg'];
+	if (index == -1)
+	{
+		document.getElementById('middleLeft').src = 'baconseeds.jpg';
+	}
+	else
+	{
+		// the first image is referenced by index = 0, the second by index = 1, etc.
+		document.getElementById('middleLeft').src = 'images/'+middleLeftExImages[index];
+	}
+}
+</script>
+</head>
+
+<body onload="MM_preloadImages('baconseeds.jpg')" >
+
+<div style="width: 521px;">
+	<img src="construction.jpg" alt="TEST" name="TEST" width="521" height="324" border="0" usemap="#TESTMap" id="TEST" />
+	<map name="TESTMap" id="TESTMap">
+	<area shape="rect" coords="162,176,248,256" onclick="swapImage(1)" />
+	</map>
+
+	<img src="baconseeds.jpg" width="246" height="328" alt="MiddleLeft" id="middleLeft" onclick="swapImage(-1)"/>
+</body>
+</html>
