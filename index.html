@@ -61,6 +61,7 @@
             <div class="col-md-6 img-portfolio">
                 <h3>Color Chart</h3>
                 <div data-bind="foreach: houseList">
+                    <img class="img-hidden" src="" alt="Custom Color" data-bind="attr: {src: house2Src}">
                     <img data-bind="attr: {src: buttonSrc}, click: $parent.setHouse" class="img-responsive, color-button" alt="Custom Color Chart">
                 </div>
 

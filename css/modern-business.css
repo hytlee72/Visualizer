@@ -19,22 +19,15 @@ a {
     background-color: #006337;
 }
 
-/*.house-img {
-    max-width: 90%;
-    max-height: 400px;
-    position: absolute;
-    z-index: 1;
-}
-.roof-img {
-    max-width: 90%;
-    max-height: 400px;
-    position: absolute;
-    z-index: 2;
+.img-hidden {
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
 }
 
 .visualizer {
     position: relative;
-}*/
+}
 .color-button {
     float: left;
 }
