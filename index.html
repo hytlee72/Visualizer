@@ -51,20 +51,25 @@
 
         <!-- Projects Row -->
         <div class="row">
-            <div data-bind="with:currentHouse" class="col-md-6 img-portfolio">
+            <div class="col-md-6 img-portfolio">
+                <input type="radio" name="house" id="setHouse1" checked="checked" data-bind="event { change: setHouse1}">House 1
+                <input type="radio" name="house" id="setHouse2" data-bind="event { change: setHouse2}">House 2
                 <h3>Choose a color from the chart</h3>
-
-                <img class="img-responsive" src="" alt="Custom Color" data-bind="attr: {src: house2Src}">
-
+                    <div data-bind="with:currentHouse">
+                        <img id="housepic" class="img-responsive" src="img/house1/house_brown-min.jpg" alt="Custom Color" data-bind="attr: {src: imgSrc}">
+                    </div>
 
             </div>
             <div class="col-md-6 img-portfolio">
                 <h3>Color Chart</h3>
                 <div data-bind="foreach: houseList">
-                    <img class="img-hidden" src="" alt="Custom Color" data-bind="attr: {src: house2Src}">
                     <img data-bind="attr: {src: buttonSrc}, click: $parent.setHouse" class="img-responsive, color-button" alt="Custom Color Chart">
-                </div>
 
+                </div>
+                <div data-bind="foreach: houseList">
+                    <img class="img-hidden" src="" alt="Custom Color" data-bind="attr: {src: img1Src}">
+                    <img class="img-hidden" src="" alt="Custom Color" data-bind="attr: {src: img2Src}">
+                </div>
             </div>
         </div>
         <!-- /.row -->
@@ -83,6 +88,10 @@
         </footer>
 
     </div>
+
+
+
+
     <!-- /.container -->
 
     <!-- jQuery -->
